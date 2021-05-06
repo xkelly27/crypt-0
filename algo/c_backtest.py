@@ -11,7 +11,7 @@ class Backtest:
 
     def start_of_period_sim(self, initial_investment=1):
         # simulate start of period of data input, add observation at t + 1
-
+        pass
 
     # need f(x) s.t midpoint is found
     def binary_search(self, array, value, slice=2, offset=0):
