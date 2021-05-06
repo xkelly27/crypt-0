@@ -5,6 +5,9 @@ from scipy.stats import norm
 import datetime
 
 
+# yfinance w/ the plug
+
+
 class Data:
     def __init__(self, ticker, period="1d", interval="1m"):
         self.ticker = ticker
@@ -32,7 +35,9 @@ class Data:
 
     def is_latest_extreme(self):
         bounds = self.norm_dict().get("bounds")
-        latest = self.get_data()[-1]
+        pct_change = self.get_data()[1]
+        latest = pct_change[-1]
+
         if latest < bounds[0] or latest > bounds[1]:
             return True
         else:
