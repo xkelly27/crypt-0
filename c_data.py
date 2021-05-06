@@ -66,8 +66,10 @@ class Data:
         elif kind == "hist" or kind == "histogram":
             data = data["pct_change"]
 
-            std = self.norm_dict().get("std")
-            mu = self.norm_dict().get("mu")
+            norm_dict = self.norm_dict()
+
+            std = norm_dict.get("std")
+            mu = norm_dict.get("mu")
 
             domain = np.linspace(np.min(data), np.max(data), 100)
             plt.plot(domain, norm.pdf(domain, mu, std))
@@ -76,7 +78,7 @@ class Data:
             ax.set_facecolor('white')
             ax.grid(color='lightgrey')
 
-            bounds = self.norm_dict().get("bounds")
+            bounds = norm_dict.get("bounds")
 
             plt.axvline(x=bounds[0], color='r')
             plt.axvline(x=bounds[1], color='r')
@@ -86,7 +88,6 @@ class Data:
             plt.xlabel('% Change')
             plt.suptitle(title)
             plt.show()
-
 
         elif kind == "returns" or kind == "change":
             data = data["pct_change"]
