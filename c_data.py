@@ -21,6 +21,10 @@ class Data:
         data["pct_change"] = data["Close"].pct_change()
         return data[["Close", "pct_change"]]
 
+    def get_latest(self):
+        data = self.get_data()["Close"]
+        return round(data[-1], 2)
+
     # ------- assert extreme movements ---------
 
     def norm_dict(self, sig_factor=6):
