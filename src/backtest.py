@@ -13,4 +13,3 @@ class Backtest:
     def start_of_period_sim(self, initial_investment=1):
         # simulate start of period of data input, add observation at t + 1
         pass
-

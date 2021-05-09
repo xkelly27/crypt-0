@@ -14,12 +14,15 @@ class Data:
         self.interval = interval
 
     def get_data(self):
-        data = yf.download(tickers=self.currency,
+        df = yf.download(tickers=self.currency,
                            period=self.period,
                            interval=self.interval)
-        data["pct_change"] = data["Close"].pct_change()
+        df["pct_change"] = df["Close"].pct_change()
         return {"currency": self.currency, "period": self.period, "interval": self.interval,
-                "data": data[["Close", "pct_change"]]}
+                "data": df}
+
+    def get_df(self):
+        return self.get_data().get("data")
 
     def get_latest(self):
         table = self.get_data().get("data")
