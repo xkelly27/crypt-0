@@ -1,6 +1,3 @@
-import c_data as CD
-import random
-
 # -------- in progress --------
 
 
