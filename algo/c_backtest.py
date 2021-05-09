@@ -18,10 +18,3 @@ class Backtest:
         mid = array.length / slice
 
         pass
-
-
-
-
-
-
-print(Backtest("ETH-USD").check_data())
