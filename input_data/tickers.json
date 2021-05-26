@@ -1,0 +1,22 @@
+{
+  "data": {
+    "USD": {
+      "Bitcoin": "BTC-USD",
+      "Ethereum": "ETH-USD",
+      "Dogecoin": "DOGE-USD",
+      "Tether": "USDT-USD",
+      "Ada": "ADA-USD",
+      "XRP": "XRP-USD",
+      "Ethereum Classic": "ETC-USD"
+    },
+    "EUR": {
+      "Bitcoin": "BTC-EUR",
+      "Ethereum": "ETH-EUR",
+      "Dogecoin": "DOGE-EUR",
+      "Tether": "USDT-EUR",
+      "Ada": "ADA-EUR",
+      "XRP": "XRP-EUR",
+      "Ethereum Classic": "ETC-EUR"
+    }
+  }
+}
